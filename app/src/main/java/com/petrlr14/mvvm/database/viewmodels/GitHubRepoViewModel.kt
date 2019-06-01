@@ -17,8 +17,8 @@ class GitHubRepoViewModel(private val app: Application) : AndroidViewModel(app) 
 
     init {
         val repoDao=RoomDB.getInstance(app).repoDao()
-        val githubServie = githubServices.getGithubService()
-        repository= GitHubRepoRepository(repoDao, githubServices.getGithubService())
+        val githubService = githubServices.getGithubService()
+        repository= GitHubRepoRepository(repoDao, githubService)
     }
 
     private suspend fun insert(repo:GitHubRepo)=repository.insert(repo)

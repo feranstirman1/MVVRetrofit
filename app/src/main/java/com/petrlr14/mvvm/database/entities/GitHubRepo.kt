@@ -15,8 +15,8 @@ data class GitHubRepo(
     @field:Json(name="name")
     val name: String,
 
-
+    @field:Json(name="full_name")
     @ColumnInfo(name="full_name")
-    @field:Json(name="fullName")
     val fullName:String
+
 )
